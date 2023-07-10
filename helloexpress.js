@@ -11,7 +11,7 @@ app.get('/about', (req, res) => {
 });
 
 app.use((req, res) => {
-    res.status(404).send('Page not found');
+    res.status(404).send('Upsiee... Not Found');
 });
 
 app.listen(port, () => {
