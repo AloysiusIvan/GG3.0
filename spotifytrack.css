@@ -1,0 +1,68 @@
+html{
+    background-color: #2c2c2c;
+}
+
+.container {
+    margin: 0 28px;
+    margin-top: 100px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.title-text p{
+    letter-spacing: 4px;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.title-text h1{
+    font-weight: 900;
+    font-size: 48px;
+    margin-top: 0;
+}
+
+.title-text h2{
+    font-size: 16px;
+    color: #B3B3B3;
+    font-weight: 400;
+}
+
+.creator{
+    color: white;
+}
+
+.track-list{
+    margin: 0 25px;
+}
+
+table{
+    width: 100%;
+    text-align: left;
+}
+
+table th{
+    font-size: 16px;
+    padding: 15px 0;
+    color: #B3B3B3;
+    font-weight: 400;
+    border-bottom: 1px #424242 solid;
+}
+
+table td{
+    padding: 15px 0;
+    border-bottom: 1px #424242 solid;
+}
+
+.btn-play{
+    background-color: #1ed760;
+    text-decoration: none;
+    color: black;
+    padding: 4px 16px;
+    border-radius: 8px;
+}
+
+.btn-play:hover{
+    background-color: #10652E;
+    color: white;
+}
