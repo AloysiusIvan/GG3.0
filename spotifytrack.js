@@ -10,48 +10,6 @@ let tracklist = [
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('Hello World from Aloy!');
-});
-
-app.get('/user/:id', (req, res) => {
-  let user = req.params.id;
-  res.send(`Hello ${user}`);
-});
-
-app.get('/query', (req, res) => {
-  let value = req.query.value;
-  res.send(`Hello World from ${value}!`);
-});
-
-app.get('/about', (req, res) => {
-    res.send('This is the about page');
-});
-
-app.post('/', (req, res) => {
-  res.send('This is POST response');
-});
-
-app.put('/', (req, res) => {
-  res.send('This is PUT response');
-});
-
-app.delete('/', (req, res) => {
-  res.send('This is DELETE response');
-});
-
-app.get('/profiles', (req, res) => {
-  let cookie = req.headers.cookie;
-  res.send(`Return user profile for ${cookie}`);
-});
-
-app.post('/adduser', (req, res) => {
-  let body = req.body;
-  res.set('id-user', body.id);
-  res.status(201);
-  res.send(`created user with name ${body.name}`);
-});
-
 app.get('/track', (req, res) => {
   res.json(tracklist);
 });
@@ -71,7 +29,11 @@ app.post('/track', (req, res) => {
 app.get('/track/:id', (req, res) => {
   let idsong = req.params.id;
   let song = tracklist.find(item => item.id == idsong);
-  res.send(`Now playing ${song.title} by ${song.artist}`);
+  if(song === undefined){
+    res.send(`Upsiee... Song not found!`);
+  }else{
+    res.send(`Now playing ${song.title} by ${song.artist}`);
+  }
 });
 
 app.use((req, res) => {
