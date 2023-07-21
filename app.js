@@ -2,11 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-let tracklist = [
-  {id: 1, title: "Disenchanted", artist: "My Chemical Romance", url: "https://open.spotify.com/track/6T7MAQCekVb3UnCykjX3BP"},
-  {id: 2, title: "Cancer", artist: "My Chemical Romance", url: "https://open.spotify.com/track/0GgN4MhR5GKn5IcKN0e0rG"},
-  {id: 3, title: "I'm Not Okay", artist: "My Chemical Romance", url: "https://open.spotify.com/track/7lRlq939cDG4SzWOF4VAnd"}
-];
+const { tracklist } = require('./models/model.js');
 
 app.use(express.json());
 
